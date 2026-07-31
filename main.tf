@@ -142,7 +142,7 @@ resource "terraform_data" "wait_for_instance" {
 
       REGION="${var.region}"
       INSTANCE_ID="${aws_instance.this.id}"
-      echo "wait script started on: $INSTANCE_ID
+      echo "wait script started on: $INSTANCE_ID..."
 
       # Maximum time (seconds) to wait for SSM registration
       SSM_TIMEOUT=${var.wait_for_instance_config.ssm_timeout_secs}
